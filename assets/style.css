@@ -1,0 +1,237 @@
+#MainMenu {
+    visibility: hidden;
+}
+
+header {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+.stDeployButton {
+    display: none;
+}
+
+html,
+body,
+.stApp {
+    background: #07161D;
+    color: #F4F7F8;
+    font-family: "Inter", sans-serif;
+}
+
+
+.block-container {
+    max-width: 1500px;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+
+h1 {
+    color: white;
+    font-weight: 700;
+}
+
+h2,
+h3,
+h4 {
+    color: white;
+}
+
+p,
+li,
+span {
+    color: #B7C8CE;
+}
+
+
+.stButton>button {
+
+    width: 100%;
+
+    height: 60px;
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(46, 213, 115, .20);
+
+    background: #0D232B;
+
+    color: white;
+
+    font-weight: 600;
+
+    transition: all .25s ease;
+
+}
+
+.stButton>button:hover {
+
+    border: 1px solid #2ED573;
+
+    background: #12303A;
+
+    box-shadow: 0 0 20px rgba(46,213,115,.20);
+
+    transform: translateY(-2px);
+
+}
+
+
+.stChatInputContainer {
+
+    background: transparent;
+
+    border: none;
+
+}
+
+.stChatInput textarea {
+
+    background: #0D232B !important;
+
+    border-radius: 18px !important;
+
+    border: 1px solid rgba(46,213,115,.20) !important;
+
+    color: white !important;
+
+}
+
+
+.stChatMessage {
+
+    background: #0C1E25;
+
+    border-radius: 22px;
+
+    padding: 18px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid rgba(46,213,115,.12);
+
+}
+
+.stChatMessage:hover {
+
+    border-color: rgba(46,213,115,.35);
+
+}
+
+
+img {
+
+    border-radius: 50%;
+
+}
+
+
+hr {
+
+    border: 1px solid rgba(255,255,255,.05);
+
+}
+
+
+[data-testid="column"]:first-child {
+
+    background: #0A1D24;
+
+    border-radius: 24px;
+
+    padding: 22px;
+
+    border: 1px solid rgba(46,213,115,.12);
+
+}
+
+
+[data-testid="column"]:nth-child(2) {
+
+    background: transparent;
+
+}
+
+
+.stAlert {
+
+    border-radius: 14px;
+
+}
+
+
+::-webkit-scrollbar {
+
+    width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: #08151B;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: #184654;
+
+    border-radius: 10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: #2ED573;
+
+}
+
+
+a {
+
+    color: #2ED573;
+
+    text-decoration: none;
+
+}
+
+a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+[data-testid="stCaptionContainer"] {
+
+    color: #8EA6AF;
+
+}
+
+
+.stButton>button,
+.stChatMessage {
+
+    transition: all .25s ease;
+
+}
+
+
+.stChatMessage:hover {
+
+    transform: translateY(-1px);
+
+}
+
+
+::selection {
+
+    background: #2ED573;
+
+    color: black;
+
+}
