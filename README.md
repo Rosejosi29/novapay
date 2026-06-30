@@ -106,3 +106,13 @@ Current knowledge source:
 ## License
 
 This project is provided for educational and demonstration purposes.
+---
+title: NovaPay
+emoji: 🌖
+colorFrom: indigo
+colorTo: blue
+sdk: docker
+pinned: false
+---
+
+Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
