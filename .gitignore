@@ -9,3 +9,6 @@ wheels/
 # Virtual environments
 .venv
 .env
+
+assets/tommy.png
+resources/NovaPay Profile.pdf
