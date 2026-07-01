@@ -30,70 +30,86 @@ if "prompt" not in st.session_state:
 if "chat_started" not in st.session_state:
     st.session_state.chat_started = False
 
-
-left, main = st.columns(
-    [1.15, 4],
-    gap="large",
-)
+if "sidebar_open" not in st.session_state:
+    st.session_state.sidebar_open = True
 
 
-with left:
+toggle_row = st.columns([0.6, 11.4])
 
-    st.image("assets/tommy.png", width=90)
-
-    st.markdown("## Tommy")
-    st.caption("NovaPay AI Assistant")
-
-    st.success(" Online")
-
-    st.divider()
-
-    if st.button(
-        " New Chat",
-        key="new_chat",
-        use_container_width=True,
-    ):
-        st.session_state.messages = []
-        st.session_state.prompt = None
-        st.session_state.chat_started = False
+with toggle_row[0]:
+    if st.button("☰", key="sidebar_toggle"):
+        st.session_state.sidebar_open = not st.session_state.sidebar_open
         st.rerun()
 
-    if st.button(
-        " Knowledge Base",
-        key="sidebar_docs",
-        use_container_width=True,
-    ):
-        st.session_state.prompt = "What documentation does NovaPay provide?"
-        st.rerun()
 
-    if st.button(
-        " Merchant Services",
-        key="sidebar_merchant",
-        use_container_width=True,
-    ):
-        st.session_state.prompt = "Tell me about NovaPay merchant services."
-        st.rerun()
+if st.session_state.sidebar_open:
+    left, main = st.columns(
+        [1.15, 4],
+        gap="large",
+    )
+else:
+    left = None
+    main = st.columns([1])[0]
 
-    if st.button(
-        " Security",
-        key="sidebar_security",
-        use_container_width=True,
-    ):
-        st.session_state.prompt = "How does NovaPay protect customer funds and accounts?"
-        st.rerun()
 
-    if st.button(
-        " Settings",
-        key="sidebar_settings",
-        use_container_width=True,
-    ):
-        st.session_state.prompt = "What account settings are available in NovaPay?"
-        st.rerun()
+if left is not None:
+    with left:
 
-    st.divider()
+        st.image("assets/tommy.png", width=90)
 
-    st.markdown("##### Powered by")
-    st.caption("NovaPay Technologies")
+        st.markdown("## Tommy")
+        st.caption("NovaPay AI Assistant")
+
+        st.success(" Online")
+
+        st.divider()
+
+        if st.button(
+            " New Chat",
+            key="new_chat",
+            use_container_width=True,
+        ):
+            st.session_state.messages = []
+            st.session_state.prompt = None
+            st.session_state.chat_started = False
+            st.rerun()
+
+        if st.button(
+            " Knowledge Base",
+            key="sidebar_docs",
+            use_container_width=True,
+        ):
+            st.session_state.prompt = "What documentation does NovaPay provide?"
+            st.rerun()
+
+        if st.button(
+            " Merchant Services",
+            key="sidebar_merchant",
+            use_container_width=True,
+        ):
+            st.session_state.prompt = "Tell me about NovaPay merchant services."
+            st.rerun()
+
+        if st.button(
+            " Security",
+            key="sidebar_security",
+            use_container_width=True,
+        ):
+            st.session_state.prompt = "How does NovaPay protect customer funds and accounts?"
+            st.rerun()
+
+        if st.button(
+            " Settings",
+            key="sidebar_settings",
+            use_container_width=True,
+        ):
+            st.session_state.prompt = "What account settings are available in NovaPay?"
+            st.rerun()
+
+        st.divider()
+
+        st.markdown("##### Powered by")
+        st.caption("NovaPay Technologies")
 
 
 with main:
