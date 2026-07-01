@@ -1,4 +1,4 @@
-# Tommy – NovaPay AI Assistant 🤖
+# Tommy – NovaPay AI Assistant
 
 <p align="center">
   <img src="assets/tommy.png" width="220" alt="Tommy">
